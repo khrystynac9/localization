@@ -1,0 +1,15 @@
+.lang {
+    display: none;
+}
+  
+.lang.visible {
+display: inline;
+}
+body {
+    width: 500px;
+    margin: 20px auto;
+}
+#welcome-message {
+    margin: 10px;
+    font-weight: bold;
+}

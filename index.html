@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Localisation</title>
+        <link rel = "stylesheet" href = "index.css">
+    </head>
+    <body>
+        <div id="languages">
+            <label>
+                <input type="radio" name="lang" value = "ua">UA
+            </label>
+            <label>
+                <input type="radio" name="lang" value = "ru">RU
+            </label>
+            <label>
+                <input type="radio" name="lang" value = "eng">ENG
+            </label>
+        </div>
+            
+        <div id="welcome-message">
+            <span class="lang lang-ua">Привіт, </span>
+            <span class="lang lang-ru">Привет, </span>
+            <span class="lang lang-eng">Hello, </span>
+            
+            <span id = "userName">UserName</span>
+            
+            <span class="lang lang-ua">. Раді тебе бачити!</span>
+            <span class="lang lang-ru">. Рады тебя видеть!</span>
+            <span class="lang lang-eng">. Glad to see you!</span>
+        </div>
+      
+        <button id="save" type = "button">Save</button>
+        <button id="delete" type = "button">Delete</button>
+        <script type = "text/javascript" src = "index.js"></script>
+    </body>
+</html>
