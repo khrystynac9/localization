@@ -9,7 +9,6 @@ var getCurrentLanguage = function () {
 
 var currentLang = getCurrentLanguage();
 var langEls = document.getElementsByClassName('lang-' + currentLang);
-
 var radioButtons = document.getElementsByTagName("input");
 for (var i = 0; i < radioButtons.length; i++) {
 	radioButtons[i].addEventListener("click", function() {
@@ -19,7 +18,6 @@ for (var i = 0; i < radioButtons.length; i++) {
             langEls[i].classList.remove('visible');
         }
         applyLanguage(selectedLang);
-
         if(selectedLang) {
             langEls = document.getElementsByClassName('lang-' + selectedLang);
             for (var k = 0; k < langEls.length; k++) {
@@ -37,6 +35,7 @@ for (var i=0; i<langEls.length; i++) {
 var name;
 if(!localStorage.myUserName) {
     var myUserName = prompt("What is your name? Enter your name here.");
+    document.getElementById("userName").innerText = myUserName;
     var $save = document.querySelector('html body button#save');
     $save.addEventListener('click', function(){
         localStorage.setItem('myUserName', JSON.stringify(myUserName));
@@ -44,11 +43,10 @@ if(!localStorage.myUserName) {
         console.log(localStorage.myUserName);
     });
 }  else {
+    name = JSON.parse(localStorage.getItem('myUserName'));
+    document.getElementById("userName").innerHTML = name;
     alert("Glad to see you,  " + name +" Have a nice day")
 }
-
-name = JSON.parse(localStorage.getItem('myUserName'));
-myName = document.getElementById("userName").innerHTML = name;
 
 var $deleteButton = document.querySelector("button#delete");
 $deleteButton.addEventListener('click', function(){
